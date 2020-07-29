@@ -1,0 +1,21 @@
+{
+
+    "description": "Translate all yout want",
+    "manifest_version": 2,
+    "name": "SimplyTranslator",
+    "version": "1.0",
+    "icons": {
+      "48": "icons/icons1.png"
+    },
+  
+    "permissions": [
+      "tabs"
+    ],
+  
+    "browser_action": {
+    "browser_style": true,
+      "default_icon": "icons/icon1.png",
+      "default_title": "SimplyTranslator",
+      "default_popup": "popup/Translator.html"
+    }
+}
