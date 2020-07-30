@@ -1,6 +1,6 @@
 # SimplyTranslator
 SimplyTranslator is a Firefox Extensions to Traslate web site 
-
+![Screenshot](https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/Screenshot.png)
 SimplyTranslator translate with Google©
 ## Installing from the Web Store/Addons page
 [Firefox Web Store]()
