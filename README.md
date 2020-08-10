@@ -1,10 +1,13 @@
 # SimplyTranslator ![](https://img.shields.io/amo/v/simplytranslator?style=plastic) ![](https://img.shields.io/github/last-commit/3Samourai/SimplyTranslator?style=plastic)
 SimplyTranslator is a Firefox Extensions(Add-on) to Traslate web site 
-![Screenshot](https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/Screenshot.png)
+![Banner](https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/banner.png)
+
 ## Features
 * You can Translate Website and text with Google Translate in one-click
 * No tracking.
 * Moderne UI
+
+![Screenshot](https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/Screenshot.png)
 ![Screenshot2](https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/Screenshot2.png)
 
 ## Installing from the Web Store/Addons page
