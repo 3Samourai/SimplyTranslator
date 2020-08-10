@@ -1,4 +1,4 @@
- browser.contextMenus.create({
+  browser.contextMenus.create({
     id: "Translate_Selection",
     title: "Translate the Selection",
     contexts: ["selection"]
@@ -18,3 +18,11 @@
   })
     }
   })
+  function SaveMessage(message, sender)
+  {
+    console.log(message.url);
+    browser.tabs.update({
+    url: message.url
+    })
+  }
+  browser.runtime.onMessage.addListener(SaveMessage)
