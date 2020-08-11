@@ -17,7 +17,7 @@ SimplyTranslator is a Firefox Extensions(Add-on) to Traslate web site
 1. Donwnload Release
 2. Navigate to `about:debugging`
 3. Choose `Load Temporary Add-on`
-4. Select the `manifest.json` file
+4. Select the `zip` file
 
 ## Contributing
 Just fork the project, make your changes and create a pull request.
