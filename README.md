@@ -17,7 +17,7 @@
     <a href="https://github.com/3Samourai/SimplyTranslator#about"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="#usage">View Website</a>
+    <a href="https://3samourai.github.io/SimplyTranslator/">View Website</a>
     ·
     <a href="https://github.com/3Samourai/SimplyTranslator/issues">Report Bug</a>
     ·
