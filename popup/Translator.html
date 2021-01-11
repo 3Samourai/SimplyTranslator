@@ -1,90 +1,115 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <style>
-#btn{
-  color: rgb(255, 255, 255);
-  background-color: #006eff;
-  min-width: 200px;
-  min-height: 50px;
-  text-align: center;
-  border-radius: 20px;
- margin: 10px;
- margin-left: 37px;
-}
-/* Add Dark Mode */      
 
-.dark-mode{
-background-color: #1c1c1e;
-color: #fefefe;
+var ToggleDark =  document.querySelector("#ToggleDark");
+var toggle =  document.getElementById("toggle");
+
+function callback(tabs) {
+  var currentTab = tabs[0]; 
+  var result = "https://translate.google.com/translate?sl=auto&u=" 
+  var creating = browser.tabs.create({
+    url:result+currentTab.url
+  });
+};
+function callBackground(tabs) {
+  var currentTab = tabs[0]; 
+  var result = "https://translate.google.com/translate?sl=auto&u=" 
+  browser.runtime.sendMessage({
+    url:result+currentTab.url
+  });
 }
 
-/*medium.com/front-end-weekly/creating-a-toggle-switch-in-css-2d23e496d035*/
-  .switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 20px;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-radius: 20px;
-  transition: all 0.3s;
-}
-.switch::after {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  border-radius:50%;
-  background-color: white;
-  top: 1px;
-  left: 1px;
-  transition: all 0.3s;
+function send()
+{
+  var lfckv = document.getElementById("toggle").checked
+ if (lfckv == true){
+  var query = { active: true, currentWindow: true };
+  browser.tabs.query(query, callback);
+ }
+ else{
+  var query = { active: true, currentWindow: true };
+  browser.tabs.query(query, callBackground);
+ }
+};
+document.querySelector("#btn").onclick = send;
+
+/*Dark Mode and Preferences*/
+var zero = 0;
+
+window.onload = function() {
+let gettingZero = browser.storage.local.get();
+gettingZero.then(onGot, onError);
 }
 
-.checkbox:checked + .switch::after {
-  left : 20px;
-}
-.checkbox:checked + .switch {
-  background-color: #006eff;
-}
-.checkbox {
-  display : none;
+function ToggleDarkMode () {
+let gettingItem = browser.storage.local.get();
+gettingItem.then(onGet, onError); 	
 }
 
 
-a {
-  margin-left: 25px;
-  margin-right: 15px;
-}
-.line{
-  margin-bottom: 8px;
-}
-.serif {
-  font-family: "Arial Black", Gadget, sans-serif;
-   font-size: 15px;
+ToggleDark.onclick = ToggleDarkMode;
+toggle.onchange = ToggleChange;
+
+function ToggleChange(){
+	if (toggle.checked == true){
+		 browser.storage.local.set({
+      ToggleOn: true   
+         });
+	}
+	else if (toggle.checked == false){
+		 browser.storage.local.set({
+      ToggleOn: false 
+         });
+	}
 }
 
-    </style>
-  </head>
-<body id="body">
-  <div class="parent">
-  <div class="panel child">
-	  <button id="ToggleDark" style="background: rgba(255,255,255,0); border: none;"><img id="icon" src=""/></button>
-    <button id="btn">Translate</button>
-  </div>
-  <div class="line">______________________________________________________</div>
-  <div class="child">
-    <a class="serif">Open in New tabs:</a>
-  <input type="checkbox" id="toggle" class="checkbox" checked />  
-  <label for="toggle" class="switch"></label>
-  </div>
-  <div class="line">______________________________________________________</div>
-  <div>
-    <a href="https://github.com/3Samourai/SimplyTranslator">Github</a>
-        <a href="https://addons.mozilla.org/en-US/firefox/addon/SimplyTranslator">Give a Review</a>
-      </div>
-  </div>
-    <script src="Translator.js"></script>
-</body>
-</html>
+function onGot(item) {
+	var icon = document.querySelector("#icon");
+		   var element = document.querySelector("#body");
+
+	if (Object.keys(item).length === 0 && item.constructor === Object){
+      browser.storage.local.set({
+      ModeOn: false,
+      ToggleOn: false    
+         });
+  	    	  icon.src = "sun.svg";
+  	    	 element.classList.remove("dark-mode");
+
+
+		}
+		else {
+  if (item["ModeOn"] == true){
+	  icon.src = "moon.svg";
+   element.classList.toggle("dark-mode");
+
+  }
+    else if (item["ModeOn"] == false){
+	    	  icon.src = "sun.svg";
+  	    	 element.classList.remove("dark-mode");
+  };
+  if (item["ToggleOn"] == true){
+	  toggle.checked = true;
+
+  }
+  else if (item["ToggleOn"] == false){
+	  toggle.checked = false;
+}
+}}
+function onGet (item) {
+	  	var icon = document.querySelector("#icon");
+   if (item["ModeOn"] == true){
+	   	  icon.src = "sun.svg";
+  browser.storage.local.set({
+  ModeOn: false      
+  }); }
+  else if (item["ModeOn"] == false){
+	  	  icon.src = "moon.svg";
+ browser.storage.local.set({
+  ModeOn: true     
+  });
+  }
+var element = document.querySelector("#body");
+   element.classList.toggle("dark-mode");
+
+}
+function onError(error) {
+  console.log(`Error: ${error}`);
+}
