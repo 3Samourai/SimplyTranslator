@@ -3,14 +3,14 @@
     "description": "Translate all yout want",
     "manifest_version": 2,
     "name": "SimplyTranslator",
-    "version": "2.5",
+    "version": "3.0",
     "icons": {
       "64": "icons/icon-64.png",
       "32": "icons/icon-32.png"
     },
   
     "permissions": [
-      "contextMenus","activeTab"
+      "contextMenus","activeTab","storage"
     ],
 
     "background": {
@@ -22,6 +22,6 @@
         "default_icon": "icons/icon-32.png",
         "default_title": "SimplyTranslator",
         "default_popup": "popup/Translator.html"
-      }
+}
     
 }
