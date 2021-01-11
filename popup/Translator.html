@@ -14,11 +14,10 @@
  margin-left: 37px;
 }
 /* Add Dark Mode */      
-@media (prefers-color-scheme: dark) {
-body {
+
+.dark-mode{
 background-color: #1c1c1e;
 color: #fefefe;
-}
 }
 
 /*medium.com/front-end-weekly/creating-a-toggle-switch-in-css-2d23e496d035*/
@@ -68,9 +67,10 @@ a {
 
     </style>
   </head>
-<body>
+<body id="body">
   <div class="parent">
   <div class="panel child">
+	  <button id="ToggleDark" style="background: rgba(255,255,255,0); border: none;"><img id="icon" src=""/></button>
     <button id="btn">Translate</button>
   </div>
   <div class="line">______________________________________________________</div>
