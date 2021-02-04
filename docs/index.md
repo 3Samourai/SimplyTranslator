@@ -13,5 +13,5 @@ SimplyTranslator is a Firefox Extensions(Add-on) to Translate Web site and Text.
 
 
 
-[Firefox Badge]: ../firefox.png
+[Firefox Badge]: https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/firefox.png
 [Firefox Url]: https://addons.mozilla.org/en-US/firefox/addon/simplytranslator/ 
