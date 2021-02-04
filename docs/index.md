@@ -1,5 +1,5 @@
 ## 🧐 About <a name = "about"></a>
-SimplyTranslator is a Firefox Extensions(Add-on) to Traslate web site.
+SimplyTranslator is a Firefox Extensions(Add-on) to Translate Web site and Text.
 
 ### Features
 * You can Translate Website and text with Google Translate in one-click
