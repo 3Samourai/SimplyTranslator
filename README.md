@@ -14,8 +14,6 @@
  <p align="center">
     SimplyTranslator is a Firefox Extensions(Add-on) to Traslate web site 
     <br />
-[<img src="firefox.png" alt="for Firefox">](https://addons.mozilla.org/en-US/firefox/addon/simplytranslator/)
-    <br />
     <br />
     <a href="https://3samourai.github.io/SimplyTranslator/">View Website</a>
     ·
@@ -26,6 +24,8 @@
   
 [![Contributors][contributors-shield]][contributors-url][![Forks][forks-shield]][forks-url][![Stargazers][stars-shield]][stars-url][![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
+[![For Firefox][Firefox Badge]][Firefox Url]
+
 <details>
   <summary>Table of Contents</summary>
   <ol>
@@ -112,4 +112,6 @@ GNU General Public License v3.0
 [issues-url]: https://github.com/3Samourai/SimplyTranslator/issues 
 [license-shield]: https://img.shields.io/github/license/3Samourai/SimplyTranslator.svg?style=for-the-badge 
 [license-url]: https://github.com/3Samourai/SimplyTranslator/blob/master/LICENSE.txt 
+[Firefox Badge]: firefox.png
+[Firefox Url]: https://addons.mozilla.org/en-US/firefox/addon/simplytranslator/ 
 
