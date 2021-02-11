@@ -9,7 +9,7 @@
     SimplyTranslator is a Firefox Extensions(Add-on) to Traslate web site 
     <br />
     <br />
-    <a href="https://3samourai.github.io/SimplyTranslator/">View Website</a>
+    <a href="https://addons.mozilla.org/en-US/firefox/addon/simplytranslator/">View Website</a>
     ·
     <a href="https://github.com/3Samourai/SimplyTranslator/issues">Report Bug</a>
     ·
