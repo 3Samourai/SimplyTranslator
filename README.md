@@ -1,10 +1,4 @@
-<!--
-*** Thanks for use SimplyREADME.
-***
-***
-*** To find what you do complete. Do a search (Ctrl/Cmd-F) «TODO»
-***
--->
+
 <p align="center">
   <a href="" rel="noopener">
  <img width=200px height=200px src="https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/icons/icon.png" alt="Project logo"></a>
@@ -24,7 +18,6 @@
   
 [![Contributors][contributors-shield]][contributors-url][![Forks][forks-shield]][forks-url][![Stargazers][stars-shield]][stars-url][![Issues][issues-shield]][issues-url]
 [![License][license-shield]][license-url]
-[![For Firefox][Firefox Badge]][Firefox Url]
 
 <details>
   <summary>Table of Contents</summary>
@@ -72,7 +65,7 @@ Git
 A step by step guide that tell you how to Install SimplyTranslator.
 
 #### Installing from the Web Store/Addons page
-[Firefox Web Store](https://addons.mozilla.org/en/firefox/addon/simplytranslator/)
+[![For Firefox][Firefox Badge]][Firefox Url]
 
 
 #### Installing from Source
@@ -83,12 +76,8 @@ A step by step guide that tell you how to Install SimplyTranslator.
 4. Select the `zip` file
 
 ## 🎈 Usage and Example <a name="usage"></a>
- <img src="https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/Screenshot.png" alt="Example"></a>
+ <img src="https://raw.githubusercontent.com/3Samourai/SimplyTranslator/master/img.png" alt="Example"></a>
  
-
-## 🗺 RoadMap <a name = "roadmap"></a>
-TODO - Add RoadMap
-
 ## ⛏️ Built Using <a name = "built_using"></a>
 - [SimplyREADME](https://github.com/3Samourai/simply-readme) - README Generator
 
