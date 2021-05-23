@@ -1,9 +1,8 @@
 {
-
-    "description": "Translate all yout want",
+    "description": "Translate Website and Files",
     "manifest_version": 2,
     "name": "SimplyTranslator",
-    "version": "3.3",
+    "version": "4.0.1",
     "icons": {
       "64": "icons/icon-64.png",
       "32": "icons/icon-32.png"
@@ -12,6 +11,8 @@
     "permissions": [
       "contextMenus","activeTab","storage"
     ],
+    
+    "homepage_url": "https://github.com/3Samourai/SimplyTranslator/",
 
     "background": {
       "scripts": ["background.js"]
@@ -22,6 +23,5 @@
         "default_icon": "icons/icon-32.png",
         "default_title": "SimplyTranslator",
         "default_popup": "popup/Translator.html"
-}
-    
+} 
 }
