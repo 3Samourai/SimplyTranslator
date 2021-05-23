@@ -20,8 +20,10 @@ background-color: #1c1c1e;
 color: #fefefe;
 }
 
-/*medium.com/front-end-weekly/creating-a-toggle-switch-in-css-2d23e496d035*/
-  .switch {
+body {
+  transition: 1s;
+}
+.switch {
   position: relative;
   display: inline-block;
   width: 40px;
@@ -41,7 +43,6 @@ color: #fefefe;
   left: 1px;
   transition: all 0.3s;
 }
-
 .checkbox:checked + .switch::after {
   left : 20px;
 }
@@ -51,38 +52,36 @@ color: #fefefe;
 .checkbox {
   display : none;
 }
-
-
 a {
   margin-left: 25px;
   margin-right: 15px;
-}
-.line{
-  margin-bottom: 8px;
 }
 .serif {
   font-family: "Arial Black", Gadget, sans-serif;
    font-size: 15px;
 }
 
+.rounded {
+    color: #006eff;
+}
     </style>
   </head>
 <body id="body">
   <div class="parent">
   <div class="panel child">
-	  <button id="ToggleDark" style="background: rgba(255,255,255,0); border: none;"><img id="icon" src=""/></button>
     <button id="btn">Translate</button>
+    <button id="ToggleDark" style="background: rgba(255,255,255,0); border: none;"><img id="icon" src=""></button>
   </div>
-  <div class="line">______________________________________________________</div>
-  <div class="child">
+    <hr class="rounded">
+    <div class="child">
     <a class="serif">Open in New tabs:</a>
   <input type="checkbox" id="toggle" class="checkbox" checked />  
   <label for="toggle" class="switch"></label>
   </div>
-  <div class="line">______________________________________________________</div>
+  <hr class="rounded">
+  <button id="btn" class="file">Translate a File</button>
   <div>
     <a href="https://github.com/3Samourai/SimplyTranslator">Github</a>
-        <a href="https://addons.mozilla.org/en-US/firefox/addon/SimplyTranslator" style="color: magenta; font-weight: bold;">Write a REVIEW</a>
       </div>
   </div>
     <script src="Translator.js"></script>
