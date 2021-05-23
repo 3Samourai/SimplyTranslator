@@ -95,12 +95,10 @@ function onGot(item) {
       ModeOn: false,
       ToggleOn: false    
          });
-  	    	  icon.src = "sun.svg";
-  	    	 element.classList.remove("dark-mode");
-
-
-		}
-		else {
+  	icon.src = "sun.svg";
+  	element.classList.remove("dark-mode");
+	}
+	else {
   if (item["ModeOn"] == true){
 	  icon.src = "moon.svg";
    element.classList.toggle("dark-mode");
