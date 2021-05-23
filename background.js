@@ -1,4 +1,4 @@
-  browser.contextMenus.create({
+    browser.contextMenus.create({
     id: "Translate_Selection",
     title: "Translate the Selection",
     contexts: ["selection"]
@@ -10,7 +10,7 @@
 
   browser.contextMenus.onClicked.addListener(function(info, tab) {
     if (info.menuItemId == "Translate_Selection") {
-     var url1 = "https://translate.google.com/#view=home&op=translate&sl=auto&tl=en&text=" + info.selectionText;
+     var url1 = "https://translate.google.com/#view=home&op=translate&sl=auto&text=" + info.selectionText;
      var creating = browser.windows.create({
     url: url1,
     type: "popup",
@@ -35,3 +35,29 @@
     })
   }
   browser.runtime.onMessage.addListener(SaveMessage)
+
+
+  function onErrorLocal(error) {
+    console.log(`Error: ${error}`);
+  }
+  function onGotLocal(item) {
+    let urlDownloadPage = "./download.html";
+    console.log("test4")
+
+    if (item["DownloadPage"] != true){
+      browser.storage.local.set({
+        DownloadPage: true
+      });
+      console.log("test")
+
+      var page = browser.tabs.create({
+        url:urlDownloadPage
+      });
+  }
+}
+window.onload = function() {
+  console.log("test3")
+
+  let gettingThanks = browser.storage.local.get();
+  gettingThanks.then(onGotLocal, onErrorLocal);
+}
