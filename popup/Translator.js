@@ -1,4 +1,3 @@
-
 var ToggleDark =  document.querySelector("#ToggleDark");
 var toggle =  document.getElementById("toggle");
 
@@ -17,6 +16,19 @@ function callBackground(tabs) {
   });
 }
 
+function callbackFile(tabs) {
+  var urlGoogle = "https://translate.google.com/?sl=autor&op=docs" 
+  var creating = browser.tabs.create({
+    url:urlGoogle
+  });
+};
+function callBackgroundFile() {
+  var urlGoogle = "https://translate.google.com/?sl=autor&op=docs" 
+  browser.runtime.sendMessage({
+    url:urlGoogle
+  });
+}
+
 function send()
 {
   var lfckv = document.getElementById("toggle").checked
@@ -29,7 +41,20 @@ function send()
   browser.tabs.query(query, callBackground);
  }
 };
+function sendFile()
+{
+  var lfckv = document.getElementById("toggle").checked
+ if (lfckv == true){
+  var query = { active: true, currentWindow: true };
+  browser.tabs.query(query, callbackFile);
+ }
+ else{
+  var query = { active: true, currentWindow: true };
+  browser.tabs.query(query, callBackgroundFile);
+ }
+};
 document.querySelector("#btn").onclick = send;
+document.querySelectorAll(".file")[0].onclick = sendFile;
 
 /*Dark Mode and Preferences*/
 var zero = 0;
@@ -65,7 +90,7 @@ function onGot(item) {
 	var icon = document.querySelector("#icon");
 		   var element = document.querySelector("#body");
 
-	if (Object.keys(item).length === 0 && item.constructor === Object){
+	if (item["ModeOn"] != true){
       browser.storage.local.set({
       ModeOn: false,
       ToggleOn: false    
