@@ -6,7 +6,7 @@
 
 <h3 align="center">SimplyTranslator</h3>
  <p align="center">
-    SimplyTranslator is a Firefox Extensions(Add-on) to Traslate web site 
+    SimplyTranslator is a Firefox Extensions(Add-on) to Traslate web site and Files
     <br />
     <br />
     <a href="https://addons.mozilla.org/en-US/firefox/addon/simplytranslator/">View Website</a>
