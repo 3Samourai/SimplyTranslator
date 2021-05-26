@@ -16,7 +16,7 @@
     <a href="https://github.com/3Samourai/SimplyTranslator/issues">Request Feature</a>
   </p>
   
-[![Contributors][contributors-shield]][contributors-url][![Forks][forks-shield]][forks-url][![Stargazers][stars-shield]][stars-url][![Issues][issues-shield]][issues-url]
+[![Contributors][contributors-shield]][contributors-url] [![Stargazers][stars-shield]][stars-url] [![Issues][issues-shield]][issues-url] ![Firefox Url][Firefox Star]
 [![License][license-shield]][license-url]
 
 <details>
@@ -103,4 +103,4 @@ GNU General Public License v3.0
 [license-url]: https://github.com/3Samourai/SimplyTranslator/blob/master/LICENSE.txt 
 [Firefox Badge]: firefox.png
 [Firefox Url]: https://addons.mozilla.org/en-US/firefox/addon/simplytranslator/ 
-
+[Firefox Star]: https://img.shields.io/amo/stars/simplytranslator?style=for-the-badge 
