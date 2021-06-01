@@ -5,7 +5,8 @@
   });
   browser.contextMenus.create({
     id: "Translate_Web",
-    title: "Translate this Website"
+    title: "Translate this Website",
+    contexts: ["page"]
   });
 
   browser.contextMenus.onClicked.addListener(function(info, tab) {
@@ -42,13 +43,11 @@
   }
   function onGotLocal(item) {
     let urlDownloadPage = "./download.html";
-    console.log("test4")
 
     if (item["DownloadPage"] != true){
       browser.storage.local.set({
         DownloadPage: true
       });
-      console.log("test")
 
       var page = browser.tabs.create({
         url:urlDownloadPage
@@ -56,7 +55,6 @@
   }
 }
 window.onload = function() {
-  console.log("test3")
 
   let gettingThanks = browser.storage.local.get();
   gettingThanks.then(onGotLocal, onErrorLocal);
