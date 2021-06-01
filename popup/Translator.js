@@ -90,15 +90,15 @@ function onGot(item) {
 	var icon = document.querySelector("#icon");
 		   var element = document.querySelector("#body");
 
-	if (item["ModeOn"] != true){
+	if (item["ModeOn"] != true && item["ModeOn"] != false){
       browser.storage.local.set({
       ModeOn: false,
       ToggleOn: false    
          });
-  	icon.src = "sun.svg";
-  	element.classList.remove("dark-mode");
-	}
-	else {
+  	    	  icon.src = "sun.svg";
+  	    	 element.classList.remove("dark-mode");
+		}
+		else {
   if (item["ModeOn"] == true){
 	  icon.src = "moon.svg";
    element.classList.toggle("dark-mode");
